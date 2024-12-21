@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page | HK Tech</title>
+    <link rel="stylesheet" href="loginpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form onsubmit="return validate()">
+          <h1>Create Account</h1>
+          <div class="social-icons">
+            <a
+              href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S2065805307%3A1733994261370899&ddm=1"
+              target="_blank"
+              ><i class="ri-google-fill"></i
+            ></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a href="https://github.com/login" target="_blank"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
+              target="_blank"
+              ><i class="ri-linkedin-fill"></i
+            ></a>
+          </div>
+          <span>Or Use Your Email for registeration</span>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            maxlength="15"
+            id="pass2"
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            maxlength="15"
+            onkeyup="check2(this)"
+          />
+          <p id="err2" style="color: red"></p>
+          <button type="submit">Sign-Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form onsubmit="return validate()">
+          <h1>Sign In</h1>
+          <div class="social-icons">
+            <a
+              href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S2065805307%3A1733994261370899&ddm=1"
+              target="_blank"
+              ><i class="ri-google-fill"></i
+            ></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a href="https://github.com/login" target="_blank"
+              ><i class="ri-github-fill"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin"
+              target="_blank"
+              ><i class="ri-linkedin-fill"></i
+            ></a>
+          </div>
+          <span>Or sign in using your Email and Password</span>
+          <input id="username" type="email" placeholder="Email" required />
+          <input
+            type="password"
+            placeholder="Password"
+            maxlength="15"
+            id="pass"
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            maxlength="15"
+            onkeyup="check(this)"
+          />
+          <p id="err" style="color: red"></p>
+          <span></span>
+          <a href="#"> Forgot your Password?</a>
+          <button type="submit">Sign-In</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome Back!</h1>
+            <p>Use your personal details to access all of site features</p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Hello Friend!</h1>
+            <p>
+              Register with your personal details to access all of site features
+            </p>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="loginpage.js"></script>
+</html>
